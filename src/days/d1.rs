@@ -7,9 +7,8 @@ pub fn count_larger_measurements() -> u32 {
         .map(|s| s.parse().unwrap())
         .collect();
     let mut counter: u32 = 0;
-    let _ = array.iter()
-        .zip(array.iter().skip(1))
-        .inspect(|(a, b)| if b > a {counter += 1})
+    let _ = array.windows(2)
+        .inspect(|w| if w[1] > w[0] {counter += 1})
         .collect::<Vec<_>>();
     counter
 }
