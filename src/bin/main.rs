@@ -5,7 +5,8 @@ fn main() {
 
     match day {
         1 => {
-            println!("{}", days::d1::count_larger_measurements());
+            println!("Single measurements: {}", days::d1::count_larger_measurements());
+            println!("Measurement windows: {}", days::d1::count_larger_measurements_windows());
         }
         _ => print!("Day does not exist"),
     }
