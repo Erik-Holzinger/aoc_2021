@@ -1,7 +1,7 @@
 use std::fs;
 
 pub fn count_larger_measurements() -> u32 {
-    let input = fs::read_to_string("./src/days/input.txt").expect("Error reading file");
+    let input = fs::read_to_string("d1/input.txt").expect("Error reading file");
     let array: Vec<u32> = input
         .lines()
         .map(|s| s.parse().unwrap())
@@ -13,7 +13,7 @@ pub fn count_larger_measurements() -> u32 {
 }
 
 pub fn count_larger_measurements_windows() -> u32 {
-    let input = fs::read_to_string("./src/days/input.txt").expect("Error reading file");
+    let input = fs::read_to_string("d1/input.txt").expect("Error reading file");
     let array: Vec<u32> = input
         .lines()
         .map(|s| s.parse().unwrap())
